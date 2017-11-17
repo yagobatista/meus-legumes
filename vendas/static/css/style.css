@@ -1,0 +1,209 @@
+body {
+    font-size: 1.8em;
+    color: black;
+}
+
+.contato-titulo {
+    margin-bottom: 1em;
+}
+
+.centralizar-form {
+    padding: 20px
+}
+
+#paragrafo-sobre {
+    font-family: sans-serif;
+    font-size: 1.6em;
+    color: #303331;
+}
+
+div.subValor {
+    padding-left: 0px;
+}
+
+#cabecalho-carrinho {
+    display: none;
+}
+
+.modal-body {
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+div.remover:hover {
+    color: #FF4500;
+}
+
+div.mudaQtdC:hover {
+    color: #FF4500;
+}
+
+div.topo {
+    padding-top: 50px;
+}
+
+.elemento {
+    color: #FF4500;
+}
+
+span.kilo {
+    font-size: 0.6em;
+}
+
+h1.elemento {
+    font-size: 3em;
+}
+
+li.elemento {
+    font-size: 1.8em;
+}
+
+li.elemento:hover {
+    color: grey;
+    text-decoration: none;
+}
+
+.valorTotal {
+    height: 30px;
+}
+
+#todos {
+    border-radius: 10px;
+    background-color: #FF4500;
+    color: #fff;
+    ";
+
+}
+
+.carrinho {
+    background-image: url("../img/carrinho.png");
+    padding-right: 15%;
+    background-size: 15%;
+    background-repeat: no-repeat;
+    background-position: 95%;
+    height: 52px;
+}
+
+.finalizar {
+    background-image: url("../img/seta2.png");
+    background-size: 6%;
+    background-repeat: no-repeat;
+    background-position: 95%;
+}
+
+.finalizarPrincipal {
+    background-size: 4%;
+}
+
+.comprarMais {
+    background-image: url("../img/seta1.png");
+    background-size: 6%;
+    background-repeat: no-repeat;
+    background-position: 5%;
+}
+
+li.elem {
+    color: #FFF;
+}
+
+img.imagem {
+    width: 100%;
+}
+
+.botao {
+    background-color: #FF4500;
+    color: #fff;
+    border-style: none;
+}
+
+.botao:visited {
+    background-color: #FF4500;
+    color: #fff;
+    border-style: none;
+}
+
+.botao:hover {
+    background-color: #FF4500;
+    color: #fff;
+    border-style: none;
+}
+
+.botao:focus {
+    background-color: #FF4500;
+    color: #fff;
+    border-style: none;
+}
+
+select.botao {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+select.botao:visited {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+select.botao:hover {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+select.botao:focus {
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+#menu1, #menu2, #menu3, #menu0 {
+    color: #FFF;
+}
+
+#menu1:hover, #menu2:hover, #menu3:hover, #menu0:hover {
+    color: grey;
+}
+
+#cabecalho {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+#mainNav {
+    background-color: #FF4500;
+    border-style: none;
+}
+
+footer.footer-fixed {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    #cabecalho-carrinho {
+        display: none;
+    }
+}

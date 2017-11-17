@@ -1,0 +1,17 @@
+<option value="Bairro de Fátima"> Bairro de Fátima </option>
+<option value="Boa Viagem"> Boa Viagem </option>
+<option value="Cachoeiras"> Cachoeiras </option>
+<option value="Centro"> Centro </option>
+<option value="Charitas"> Charitas </option>
+<option value="Gragoatá"> Gragoatá </option>
+<option value="Icaraí"> Icaraí </option>
+<option value="Ingá"> Ingá </option>
+<option value="Jurujuba"> Jurujuba </option>
+<option value="Morro do Estado"> Morro do Estado </option>
+<option value="Pé Pequeno"> Pé Pequeno </option>
+<option value="Ponta d'Areia"> Ponta d'Areia </option>
+<option value="Santa Rosa"> Santa Rosa </option>
+<option value="São Domingos"> São Domingos </option>
+<option value="São Francisco"> São Francisco </option>
+<option value="Viradouro"> Viradouro </option>
+<option value="Vital Brazil"> Vital Brazil </option>

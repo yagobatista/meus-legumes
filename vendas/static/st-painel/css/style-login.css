@@ -1,0 +1,9 @@
+.login {
+    margin-top: 20%;
+}
+
+@media (max-width:600px) {
+    .login {
+        margin-top: 50%;
+    }
+}
