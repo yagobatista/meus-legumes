@@ -77,7 +77,7 @@
             </div>
         </li>-->
         <li><a href="painel.php?sessao=7"><span class="glyphicon glyphicon-search"></span>Pesquisa avançada</a></li>
-        <li><a href="painel.php?sessao=8"><span class="glyphicon glyphicon-apple"></span>Produtos</a></li>
+        <li><a href="painel.php?sessao=8"><span class="glyphicon glyphicon-apple"></span>Produto</a></li>
         <li><a href="painel.php?sessao=9"><span class="glyphicon glyphicon-file"></span>Faturamento</a></li>
         <li><a href="painel.php?sessao=10"><span class="glyphicon glyphicon-user"></span>Usuarios</a></li>
         <li><a href="logout.php"><span class="glyphicon glyphicon-off"></span>Sair</a></li>

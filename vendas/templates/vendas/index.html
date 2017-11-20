@@ -77,10 +77,13 @@
         </div>
     </div>
     </div>
+    <div class="container">
+      <div class="row">
+        {%for produto in lista %}
         <article class="col-md-2 col-xs-6 col-sm-3 produtos $tipo">
-              <h1 class="text-center nome">$nome</h1>
-              <img src="$caminhoImagem" class="foto-produto img-responsive" alt="foto de uma batata">
-              <h3 class="preco">$preco<span class='kilo'>/kg</span></h3>
+              <h1 class="text-center nome">{{produto.nome}}</h1>
+              <img src="{{produto.imagem.url}}" class="foto-produto img-responsive" alt="foto de uma batata">
+              <h3 class="preco">{{produto.valor}}<span class='kilo'>/kg</span></h3>
               <h3>Quantidade:</h3>
               <select name="qtd" class="qtd form-control ">";
    <option value="0"></option>
@@ -92,6 +95,9 @@
              <h2 id="valorTotal" class="valorTotal"></h2>
              <button class="btn-default botao carrinho">+ Adicionar ao carrinho</button>
           </article>
+        {%endfor%}
+      </div>
+    </div>
 
       <div class="container">
           <div id="cabecalho" class="row">
