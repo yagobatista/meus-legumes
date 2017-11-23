@@ -83,17 +83,20 @@
         <article class="col-md-2 col-xs-6 col-sm-3 produtos $tipo">
               <h1 class="text-center nome">{{produto.nome}}</h1>
               <img src="{{produto.imagem.url}}" class="foto-produto img-responsive" alt="foto de uma batata">
-              <h3 class="preco">{{produto.valor}}<span class='kilo'>/kg</span></h3>
+              <h3 class="preco">{{produto.preco}}<span class='kilo'>/kg</span></h3>
               <h3>Quantidade:</h3>
-              <select name="qtd" class="qtd form-control ">";
-   <option value="0"></option>
-                 <option value="1">1 kg</option>
-                 <option value="2">2 kg</option>
-                 <option value="3">3 kg</option>
-              <option value="4">4 kg</option>
-</select>
-             <h2 id="valorTotal" class="valorTotal"></h2>
-             <button class="btn-default botao carrinho">+ Adicionar ao carrinho</button>
+              <form class="" action="carrinho/adicionar" method="post">
+                <select name="quantidade" class="qtd form-control ">";
+                   <option value="0"></option>
+                   <option value="1">1 kg</option>
+                   <option value="2">2 kg</option>
+                   <option value="3">3 kg</option>
+                <option value="4">4 kg</option>
+               </select>
+               <input type="hidden" name="id_produto" value="{{produto.id}}">
+               <h2 id="valorTotal" class="valorTotal"></h2>
+               <button type="submit" class="btn-default botao carrinho">+ Adicionar ao carrinho</button>
+              </form>
           </article>
         {%endfor%}
       </div>
