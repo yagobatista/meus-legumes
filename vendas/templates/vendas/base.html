@@ -66,7 +66,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-                    <a href="#carrinho" data-toggle="modal" class=""><button type="button" class="navbar-toggle"><img src="img/carrinho.png">
+                    <a href="#carrinho" data-toggle="modal" class=""><button type="button" class="navbar-toggle"><img src="{% static 'img/carrinho.png'%}">
       </button></a>
                     <a id="menu0" class="rolar navbar-brand" href="#home">Meus Legumes</a>
                 </div>
@@ -80,10 +80,7 @@
                             <a href="#menu" id="menu2" class="rolar">Menu</a>
                         </li>
                          <li>
-                             <a href="#contato" id="menu3" class="rolar">Contato</a>
-                         </li>
-                         <li>
-                             <a id="carrinho2" href="#carrinho" data-toggle="modal" class="navbar-right"><img src="img/carrinho.png"></a>
+                             <a id="carrinho2" href="carrinho/" class="navbar-right"><img src="{% static 'img/carrinho.png'%}"></a>
                          </li>
                     </ul>
                 </div>
@@ -100,20 +97,17 @@
   <div class="container">
           <hr>
           <div id="st" class="row">
-              <div class="col-md-2 col-xs-4 ">
-                  <a href="http://stwebdesign.esy.es/"><img class="imagem" src="img/logost.png"></a>
-              </div>
-              <div class="col-md-10 col-xs-8">
-                  <p>&copy; 2016 ST Web Design <br>Contato: (21)99143-3461</p>
+              <div class="col-md-12">
+                  <a href="https://github.com/yagobatista">Yago Batista da Silva</a>
               </div>
           </div>
   </div>
 
 </footer>
-<script src="js/jquery.js"></script>
+<script src="{% static 'js/jquery.js' %}"></script>
 
 <!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 
 <!-- Script to Activate the Carousel -->
 <script>
