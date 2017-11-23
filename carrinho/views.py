@@ -52,3 +52,14 @@ def detalhes_do_carrinho(request):
     #    {'id': 2, 'quantidade': 3, 'preco': 200, 'preco_total': 600, 'produto': obj_produto2, 'atualizar_quantidade_form' : obj_form2}}]
 
     return render(request, 'carrinho/exibe.html', {'carrinho': carrinho, 'lista': lista})
+
+
+def remover_do_carrinho(request, id_produto):
+    # recuperamos o carrinho que se encontra na sessão
+    carrinho = Carrinho(request)
+    # recuperamos o produto do BD
+    produto = get_object_or_404(Produto, id=id_produto)
+    # removemos o produto do carrinho
+    carrinho.remover(produto)
+    # redirecionamos para detalhes_do_carrinho
+    return redirect('carrinho:detalhes_do_carrinho')

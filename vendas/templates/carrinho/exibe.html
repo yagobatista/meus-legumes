@@ -2,11 +2,8 @@
 
 {% load static %}
 
-{% block titulo %}
-    Seu carrinho de compras
-{% endblock %}
 
-{% block conteudo %}
+{% block content %}
     <div class="container">
         <div class="row">
             <h3>Seu carrinho de compras</h3>
@@ -35,16 +32,16 @@
                         <tr>
                             <td>
                                 <a href="{{ item.produto.get_absolute_path }}">
-                                    <img style="max-height: 90px" class="img-rounded img-responsive center-block" src="{% static '/vendas/imagens/' %}{{ item.produto.imagem }}">
+                                    <img style="max-height: 90px" class="img-rounded img-responsive center-block" src="{{ item.produto.imagem.url }}">
                                 </a>
                             </td>
                             <td>{{ item.produto.nome }}</td>
                             <td class="fit">
-                                <form class="form-inline text-center" method="post" action="{% url 'carrinho:adicionar_ao_carrinho' item.id %}">
+                                <form class="form-inline text-center" method="post" action="{% url 'carrinho:adicionar_ao_carrinho'%}">
                                     {{ item.atualizar_quantidade_form.quantidade }}
                                     {{ item.atualizar_quantidade_form.atualizar }}
                                     <input class="btn btn-primary btn-sm" type="submit" value="Atualizar">
-                                    <a class="btn btn-danger btn-sm" href="{% url 'carrinho:remover_do_carrinho' item.id %}">Remover</a>
+                                    <a class="btn btn-danger btn-sm" href="{% url 'carrinho:remover_do_carrinho' %}">Remover</a>
                                     {% csrf_token %}
                                 </form>
                             </td>
