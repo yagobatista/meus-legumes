@@ -24,7 +24,7 @@ def adicionar(request):
                      quantidade=cd['quantidade'],
                      atualiza_quantidade=cd['atualizar'])
         # A view redireciona para o detalhes_do_carrinho URL que irá exibir o conteúdo do carrinho.
-        return redirect('http://localhost:8000/carrinho/') # Este redirect fará com que a requisição seja redirecionada
+        return redirect('carrinho:detalhes_do_carrinho') # Este redirect fará com que a requisição seja redirecionada
                                                          # para http://127.0.0.1:8000/carrinho
 def detalhes_do_carrinho(request):
     # recupera o carrinho que está armazenado na sessão

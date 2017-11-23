@@ -22,7 +22,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^carrinho/adicionar/$',adicionar),
-    url(r'^carrinho/$',detalhes_do_carrinho),
+    url(r'^carrinho/',include('carrinho.urls',namespace='carrinho')),
     url(r'^$',views.home),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
