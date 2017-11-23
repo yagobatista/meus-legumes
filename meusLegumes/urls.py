@@ -16,11 +16,13 @@ Including another URLconf
 from django.conf.urls import url,include
 from django.contrib import admin
 from vendas import views
-from carrinho.views import adiciona
+from carrinho.views import adicionar
+from carrinho.views import detalhes_do_carrinho
 from django.conf import settings
 from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^carrinho/adicionar/$',adicionar),
+    url(r'^carrinho/$',detalhes_do_carrinho),
     url(r'^$',views.home),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

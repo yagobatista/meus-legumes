@@ -85,7 +85,7 @@
               <img src="{{produto.imagem.url}}" class="foto-produto img-responsive" alt="foto de uma batata">
               <h3 class="preco">{{produto.preco}}<span class='kilo'>/kg</span></h3>
               <h3>Quantidade:</h3>
-              <form class="" action="carrinho/adicionar" method="post">
+              <form class="" action="carrinho/adicionar/" method="post">
                 <select name="quantidade" class="qtd form-control ">";
                    <option value="0"></option>
                    <option value="1">1 kg</option>
@@ -96,6 +96,7 @@
                <input type="hidden" name="id_produto" value="{{produto.id}}">
                <h2 id="valorTotal" class="valorTotal"></h2>
                <button type="submit" class="btn-default botao carrinho">+ Adicionar ao carrinho</button>
+               {% csrf_token %}
               </form>
           </article>
         {%endfor%}
