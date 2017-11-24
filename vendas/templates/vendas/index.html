@@ -1,4 +1,4 @@
- {% extends "vendas/base.html" %} {% block content %}
+ {% extends "vendas/base.html" %}{% load static %} {% block content %}
   <section id="home">
     <div id="myCarousel" class="carousel slide" >
       <ol class="carousel-indicators">
@@ -11,21 +11,21 @@
       <div class="carousel-inner">
           <div class="item active">
               <!-- Set the first background image using inline CSS below. -->
-              <div class="fill" style="background-image:url('img/capa.jpg');"></div>
+              <div class="fill" style="background-image:url({% static 'img/capa.jpg'%});"></div>
               <div class="carousel-caption">
                   <h2>Caption 1</h2>
               </div>
           </div>
           <div class="item">
               <!-- Set the second background image using inline CSS below. -->
-              <div class="fill" style="background-image:url('img/capa1.jpg');"></div>
+              <div class="fill" style="background-image:url({% static 'img/capa1.jpg'%});"></div>
               <div class="carousel-caption">
                   <h2>Caption</h2>
               </div>
           </div>
           <div class="item">
               <!-- Set the third background image using inline CSS below. -->
-              <div class="fill" style="background-image:url('img/capa2.jpg');"></div>
+              <div class="fill" style="background-image:url({% static 'img/capa2.jpg'%});"></div>
               <div class="carousel-caption">
                   <h2>Caption 3</h2>
               </div>
@@ -57,7 +57,7 @@
                   </p>
               </div>
               <div class="co-xs-12 col-sm-6 col-md-6">
-                  <img src="img/sobre.jpg" class="imagem">
+                  <img src="{% static 'img/sobre.jpg'%}" class="imagem">
               </div>
           </div>
       </div>
@@ -106,7 +106,7 @@
       <div class="container">
           <div id="cabecalho" class="row">
               <div class="topo col-xs-8 col-xs-offset-2  col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
-                  <a href="#carrinho" data-toggle="modal"><button name=\"qtd\" class="form-control botao finalizar finalizarPrincipal">Finalizar compra</button></a>
+                  <a href="/carrinho/" data-toggle="modal"><button name="qtd" class="form-control botao finalizar finalizarPrincipal">Finalizar compra</button></a>
               </div>
 
           </div>
