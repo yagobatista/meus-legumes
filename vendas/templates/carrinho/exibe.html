@@ -40,6 +40,7 @@
                                 <form class="form-inline text-center" method="post" action="{% url 'carrinho:adicionar_ao_carrinho'%}">
                                     {{ item.atualizar_quantidade_form.quantidade }}
                                     {{ item.atualizar_quantidade_form.atualizar }}
+                                    <input type="hidden" name="id_produto" value="{{item.id}}"/>
                                     <input class="btn btn-primary btn-sm" type="submit" value="Atualizar">
                                     <a class="btn btn-danger btn-sm" href="{% url 'carrinho:remover_do_carrinho' item.id %}">Remover</a>
                                     {% csrf_token %}
