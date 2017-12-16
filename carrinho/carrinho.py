@@ -66,7 +66,9 @@ class Carrinho(object):
             self.carrinho[produto_id]['quantidade'] += quantidade
 
         self.salvar()        # O método salvar é chamado para que o carrinho seja salvo na sessão
-
+    def get_produto_sub_total(self,produto):
+        produto_id = str(produto.id)
+        return self.carrinho[produto_id]['quantidade'] * produto.preco
 
     def remover(self, produto):
         """ Remove a produto from the carrinho. """

@@ -47,13 +47,13 @@
                                 </form>
                             </td>
                             <td class="text-right">R$ {{ item.preco }}</td>
-                            <td class="text-right">R$ {{ item.preco_total }}</td>
+                            <td class="text-right sub-total">R$ {{ item.preco_total }}</td>
                         </tr>
                     {% endfor %}
                     <tr>
                         <td><b>Total do Pedido</b></td>
                         <td colspan="3"></td>
-                        <td class="text-right">R$ {{ carrinho.get_preco_total }}</td>
+                        <td id="tot2" class="text-right">R$ {{ carrinho.get_preco_total }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -63,3 +63,4 @@
         </div>
     </div>
 {% endblock %}
+

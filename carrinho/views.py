@@ -25,6 +25,9 @@ def adicionar(request):
             carrinho.adicionar(produto=produto,
                      quantidade=cd['quantidade'],
                      atualiza_quantidade=cd['atualizar'])
+            if request.is_ajax():
+                return render(request, 'carrinho/exibe_ajax.html', {'carrinho': carrinho,"sub_total":carrinho.get_produto_sub_total(produto)})         
+
         # A view redireciona para o detalhes_do_carrinho URL que irá exibir o conteúdo do carrinho.
         return redirect('carrinho:detalhes_do_carrinho') # Este redirect fará com que a requisição seja redirecionada
                                                          # para http://127.0.0.1:8000/carrinho
