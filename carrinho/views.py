@@ -16,6 +16,8 @@ def adicionar(request):
                              # é chamado, se todos os campos tiverem dados válidos ele irá:
                              # - retornar True
                              # - colocar os dados do form no atributo cleaned_data do formulário
+            # if request.is_ajax():
+
             cd = form.cleaned_data
             produto = Produto.objects.get(id=cd['id_produto'])
             # Se o formulário for válido, adicionamos ou atualizamos o

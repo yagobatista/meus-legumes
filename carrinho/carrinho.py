@@ -96,5 +96,7 @@ class Carrinho(object):
         self.session[settings.CARRINHO_SESSION_ID] = {}
         self.session.modified = True
 
+    # def get_total_produtos (self):
+    #     pa
     def get_preco_total(self):
         return sum(Decimal(item['preco']) * item['quantidade'] for item in self.carrinho.values())
