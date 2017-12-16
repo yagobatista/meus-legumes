@@ -77,7 +77,22 @@
                             <a href="#menu" id="menu2" class="rolar">Menu</a>
                         </li>
                          <li>
-                             <a id="carrinho2" href="carrinho/" class="navbar-right"><img src="{% static 'img/carrinho.png'%}"></a>
+                            <a href="{% url "carrinho:detalhes_do_carrinho" %}" class="navbar-right">
+                               {% with qtd_itens=carrinho|length %}
+                        {% if qtd_itens > 0 %}
+                            <span id="tot1">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Seu carrinho:
+                                
+                                    {% if qtd_itens > 1 %}
+                                        {{ qtd_itens }} itens, R${{ carrinho.get_preco_total }}
+                                    {% else %}
+                                        {{ qtd_itens }} item, R${{ carrinho.get_preco_total }}
+                                    {% endif %}
+                            </span>
+                        {% else %}
+                            <span id="tot1" class="glyphicon glyphicon-shopping-cart"></span> Seu carrinho está vazio.
+                        {% endif %}
+                    {% endwith %}</a>
                          </li>
                     </ul>
                 </div>

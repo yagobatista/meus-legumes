@@ -67,6 +67,26 @@
         <span class="icon-bar"></span>
       </button>
                     <a  class="navbar-brand" href="/#menu">Meus Legumes</a>
+                    <ul class="nav navbar-nav">
+                         <li>
+                            <a href="{% url "carrinho:detalhes_do_carrinho" %}" class="navbar-right">
+                               {% with qtd_itens=carrinho|length %}
+                        {% if qtd_itens > 0 %}
+                            <span id="tot1">
+                                <span class="glyphicon glyphicon-shopping-cart"></span> Seu carrinho:
+                                
+                                    {% if qtd_itens > 1 %}
+                                        {{ qtd_itens }} itens, R${{ carrinho.get_preco_total }}
+                                    {% else %}
+                                        {{ qtd_itens }} item, R${{ carrinho.get_preco_total }}
+                                    {% endif %}
+                            </span>
+                        {% else %}
+                            <span id="tot1" class="glyphicon glyphicon-shopping-cart"></span> Seu carrinho está vazio.
+                        {% endif %}
+                    {% endwith %}</a>
+                         </li>
+                    </ul>
                 </div>
 
                 <!-- /.navbar-collapse -->
